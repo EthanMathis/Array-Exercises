@@ -23,11 +23,11 @@ export const getStudentNames = () => {
 */
 
 export const StudentList = () => {
-  return students.map(kid => {
-    return `
-    <div>
+  const string = students.map(kid => {
+    return `<div>
     <h1>${kid.firstName} ${kid.lastName}</h1>
     <h2>Cohort ${kid.cohort}</h2>
-    </div>`
+    </div>` 
   })
+  return string.join(" ")
 }
